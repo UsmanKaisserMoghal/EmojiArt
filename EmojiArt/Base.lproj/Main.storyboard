@@ -23,7 +23,17 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L7Y-p6-V1l" customClass="EmojiArtView" customModule="EmojiArt" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1004"/>
+                                        <subviews>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Yb7-vV-kFM">
+                                                <rect key="frame" x="673" y="492" width="20" height="20"/>
+                                                <color key="color" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </activityIndicatorView>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Yb7-vV-kFM" firstAttribute="centerX" secondItem="L7Y-p6-V1l" secondAttribute="centerX" id="3Dc-s6-Ycd"/>
+                                            <constraint firstItem="Yb7-vV-kFM" firstAttribute="centerY" secondItem="L7Y-p6-V1l" secondAttribute="centerY" id="Dah-8Q-Y7V"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -47,6 +57,7 @@
                     <connections>
                         <outlet property="dropZone" destination="G3t-gs-FGu" id="e3W-qw-CBH"/>
                         <outlet property="emojiArtView" destination="L7Y-p6-V1l" id="kuK-6H-1FY"/>
+                        <outlet property="spinner" destination="Yb7-vV-kFM" id="UjJ-PU-oQD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
