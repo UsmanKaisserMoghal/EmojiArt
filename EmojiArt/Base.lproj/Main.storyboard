@@ -78,27 +78,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3t-gs-FGu">
                                 <rect key="frame" x="0.0" y="20" width="990.5" height="1004"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L7Y-p6-V1l" customClass="EmojiArtView" customModule="EmojiArt" customModuleProvider="target">
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ZCz-EV-Xar">
+                                        <rect key="frame" x="485.5" y="492" width="20" height="20"/>
+                                        <color key="color" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nx8-cs-N6f">
                                         <rect key="frame" x="0.0" y="0.0" width="990.5" height="1004"/>
-                                        <subviews>
-                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Yb7-vV-kFM">
-                                                <rect key="frame" x="485.5" y="492" width="20" height="20"/>
-                                                <color key="color" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </activityIndicatorView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="Yb7-vV-kFM" firstAttribute="centerX" secondItem="L7Y-p6-V1l" secondAttribute="centerX" id="3Dc-s6-Ycd"/>
-                                            <constraint firstItem="Yb7-vV-kFM" firstAttribute="centerY" secondItem="L7Y-p6-V1l" secondAttribute="centerY" id="Dah-8Q-Y7V"/>
-                                        </constraints>
-                                    </view>
+                                    </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="L7Y-p6-V1l" firstAttribute="leading" secondItem="G3t-gs-FGu" secondAttribute="leading" id="Jpb-Bi-gBL"/>
-                                    <constraint firstAttribute="trailing" secondItem="L7Y-p6-V1l" secondAttribute="trailing" id="Nt0-yz-1iM"/>
-                                    <constraint firstAttribute="bottom" secondItem="L7Y-p6-V1l" secondAttribute="bottom" id="aWl-hi-GUf"/>
-                                    <constraint firstItem="L7Y-p6-V1l" firstAttribute="top" secondItem="G3t-gs-FGu" secondAttribute="top" id="m6S-s7-K6a"/>
+                                    <constraint firstItem="ZCz-EV-Xar" firstAttribute="centerX" secondItem="G3t-gs-FGu" secondAttribute="centerX" id="6PK-9o-ncM"/>
+                                    <constraint firstItem="Nx8-cs-N6f" firstAttribute="leading" secondItem="G3t-gs-FGu" secondAttribute="leading" id="6bU-xx-Ncu"/>
+                                    <constraint firstItem="Nx8-cs-N6f" firstAttribute="top" secondItem="G3t-gs-FGu" secondAttribute="top" id="FoU-w6-AtD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nx8-cs-N6f" secondAttribute="trailing" id="eU3-t2-jzl"/>
+                                    <constraint firstItem="ZCz-EV-Xar" firstAttribute="centerY" secondItem="G3t-gs-FGu" secondAttribute="centerY" id="ewo-9c-AvJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nx8-cs-N6f" secondAttribute="bottom" id="k3K-fR-7wf"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -113,8 +108,8 @@
                     </view>
                     <connections>
                         <outlet property="dropZone" destination="G3t-gs-FGu" id="e3W-qw-CBH"/>
-                        <outlet property="emojiArtView" destination="L7Y-p6-V1l" id="kuK-6H-1FY"/>
-                        <outlet property="spinner" destination="Yb7-vV-kFM" id="UjJ-PU-oQD"/>
+                        <outlet property="scrollView" destination="Nx8-cs-N6f" id="Y5u-g4-3lt"/>
+                        <outlet property="spinner" destination="ZCz-EV-Xar" id="fk9-y0-XPr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
