@@ -55,7 +55,13 @@
                             <outlet property="delegate" destination="4GT-XL-zvF" id="uzz-q1-Wax"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="wrn-eA-jWC"/>
+                    <navigationItem key="navigationItem" id="wrn-eA-jWC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4b1-e4-VXW">
+                            <connections>
+                                <action selector="newEmojiArt:" destination="4GT-XL-zvF" id="DG5-MM-SYW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="28Y-4o-fFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
