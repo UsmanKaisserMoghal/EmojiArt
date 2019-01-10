@@ -92,13 +92,28 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="GBF-Px-Juy">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EmojiCell" id="GBF-Px-Juy" customClass="EmojiCollectionViewCell" customModule="EmojiArt" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="949-9I-ahU">
+                                                    <rect key="frame" x="5.5" y="2" width="69" height="76.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="949-9I-ahU" firstAttribute="centerY" secondItem="GBF-Px-Juy" secondAttribute="centerY" id="1WG-YV-j6c"/>
+                                            <constraint firstItem="949-9I-ahU" firstAttribute="centerX" secondItem="GBF-Px-Juy" secondAttribute="centerX" id="lFw-hm-wiT"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="label" destination="949-9I-ahU" id="cNs-aQ-MGv"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -137,6 +152,7 @@
                     </view>
                     <connections>
                         <outlet property="dropZone" destination="G3t-gs-FGu" id="e3W-qw-CBH"/>
+                        <outlet property="emojiCollectionView" destination="c8h-oh-phd" id="wGU-iB-y8M"/>
                         <outlet property="scrollView" destination="Nx8-cs-N6f" id="Y5u-g4-3lt"/>
                         <outlet property="spinner" destination="ZCz-EV-Xar" id="fk9-y0-XPr"/>
                     </connections>
