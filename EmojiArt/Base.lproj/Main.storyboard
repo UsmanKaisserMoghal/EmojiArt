@@ -90,10 +90,12 @@
                                 <constraints>
                                     <constraint firstItem="ZCz-EV-Xar" firstAttribute="centerX" secondItem="G3t-gs-FGu" secondAttribute="centerX" id="6PK-9o-ncM"/>
                                     <constraint firstItem="Nx8-cs-N6f" firstAttribute="top" secondItem="G3t-gs-FGu" secondAttribute="top" id="MBb-he-fdV"/>
+                                    <constraint firstItem="Nx8-cs-N6f" firstAttribute="centerY" secondItem="G3t-gs-FGu" secondAttribute="centerY" id="YHF-AP-OMe"/>
                                     <constraint firstItem="Nx8-cs-N6f" firstAttribute="leading" secondItem="G3t-gs-FGu" secondAttribute="leading" id="Zmu-Yn-ErQ"/>
                                     <constraint firstItem="ZCz-EV-Xar" firstAttribute="centerY" secondItem="G3t-gs-FGu" secondAttribute="centerY" id="ewo-9c-AvJ"/>
                                     <constraint firstAttribute="bottom" secondItem="Nx8-cs-N6f" secondAttribute="bottom" id="sQX-Hn-j4c"/>
                                     <constraint firstAttribute="trailing" secondItem="Nx8-cs-N6f" secondAttribute="trailing" id="u6a-KW-rtf"/>
+                                    <constraint firstItem="Nx8-cs-N6f" firstAttribute="centerX" secondItem="G3t-gs-FGu" secondAttribute="centerX" id="yeI-SH-fPw"/>
                                 </constraints>
                             </view>
                         </subviews>
