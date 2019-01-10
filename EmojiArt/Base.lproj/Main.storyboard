@@ -89,11 +89,11 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="ZCz-EV-Xar" firstAttribute="centerX" secondItem="G3t-gs-FGu" secondAttribute="centerX" id="6PK-9o-ncM"/>
-                                    <constraint firstItem="Nx8-cs-N6f" firstAttribute="leading" secondItem="G3t-gs-FGu" secondAttribute="leading" id="6bU-xx-Ncu"/>
-                                    <constraint firstItem="Nx8-cs-N6f" firstAttribute="top" secondItem="G3t-gs-FGu" secondAttribute="top" id="FoU-w6-AtD"/>
-                                    <constraint firstAttribute="trailing" secondItem="Nx8-cs-N6f" secondAttribute="trailing" id="eU3-t2-jzl"/>
+                                    <constraint firstItem="Nx8-cs-N6f" firstAttribute="top" secondItem="G3t-gs-FGu" secondAttribute="top" id="MBb-he-fdV"/>
+                                    <constraint firstItem="Nx8-cs-N6f" firstAttribute="leading" secondItem="G3t-gs-FGu" secondAttribute="leading" id="Zmu-Yn-ErQ"/>
                                     <constraint firstItem="ZCz-EV-Xar" firstAttribute="centerY" secondItem="G3t-gs-FGu" secondAttribute="centerY" id="ewo-9c-AvJ"/>
-                                    <constraint firstAttribute="bottom" secondItem="Nx8-cs-N6f" secondAttribute="bottom" id="k3K-fR-7wf"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nx8-cs-N6f" secondAttribute="bottom" id="sQX-Hn-j4c"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nx8-cs-N6f" secondAttribute="trailing" id="u6a-KW-rtf"/>
                                 </constraints>
                             </view>
                         </subviews>
