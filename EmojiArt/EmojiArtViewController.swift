@@ -80,20 +80,58 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return emojis.count
+        switch section {
+        case 0: return 1
+        case 1: return emojis.count
+        default: return 0
+        }
     }
     
     private var font: UIFont {
         return UIFontMetrics(forTextStyle: .body).scaledFont(for: UIFont.preferredFont(forTextStyle: .body).withSize(64.0))
     }
     
+    var addingEmoji = false
+    
+    
+    @IBAction func addEmoji() {
+        addingEmoji = true
+        emojiCollectionView.reloadSections(IndexSet(integer: 0))
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EmojiCell", for: indexPath)
-        if let emojiCell = cell as? EmojiCollectionViewCell {
-            let text = NSAttributedString(string: emojis[indexPath.item], attributes: [.font:font])
-            emojiCell.label.attributedText = text
+        if indexPath.section == 1 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EmojiCell", for: indexPath)
+            if let emojiCell = cell as? EmojiCollectionViewCell {
+                let text = NSAttributedString(string: emojis[indexPath.item], attributes: [.font:font])
+                emojiCell.label.attributedText = text
+            }
+            return cell
+        } else if addingEmoji {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EmojiInoutCell", for: indexPath)
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddEmojiButtonCell", for: indexPath)
+            return cell
         }
-        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if addingEmoji && indexPath.section == 0 {
+            return CGSize(width: 300, height: 80)
+        } else {
+            return CGSize(width: 80, height: 80)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if let inputCell = cell as? TextFieldCollectionViewCell {
+            inputCell.textField.becomeFirstResponder()
+        }
     }
     
     func dragItems(at indexPath: IndexPath) -> [UIDragItem] {
