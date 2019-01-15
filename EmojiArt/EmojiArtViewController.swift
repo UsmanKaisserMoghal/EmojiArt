@@ -93,11 +93,11 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
     
     var addingEmoji = false
     
-    
-    @IBAction func addEmoji() {
+    @IBAction func addEmoji(_ sender: UIButton) {
         addingEmoji = true
         emojiCollectionView.reloadSections(IndexSet(integer: 0))
     }
+    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
@@ -112,7 +112,7 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
             }
             return cell
         } else if addingEmoji {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EmojiInoutCell", for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EmojiInputCell", for: indexPath)
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddEmojiButtonCell", for: indexPath)

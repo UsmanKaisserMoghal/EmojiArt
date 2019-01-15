@@ -144,8 +144,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                                     <state key="normal" title="+"/>
                                                     <connections>
-                                                        <action selector="addEmoji" destination="BYZ-38-t0r" eventType="touchUpInside" id="RKr-N3-xyr"/>
-                                                        <action selector="addEmoji:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wBm-zD-kCO"/>
+                                                        <action selector="addEmoji:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UWa-lZ-i0s"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -166,7 +165,7 @@
                                                     <rect key="frame" x="-9" y="25" width="97" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
